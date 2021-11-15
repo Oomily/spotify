@@ -29,8 +29,8 @@ var _getParametersFromRequest = function(request) {
   }
   return options;
 };
-
 var _toError = function(response) {
+  if(response != null && response.body != null && response.body.error != null){
   if (typeof response.body === 'object' && response.body.error && typeof response.body.error === 'object' && response.body.error.reason) {
     return new WebapiPlayerError(response.body, response.headers, response.statusCode);
   }
@@ -42,9 +42,9 @@ var _toError = function(response) {
   if (typeof response.body === 'object' && response.body.error && typeof response.body.error === 'string') {
     return new WebapiAuthenticationError(response.body, response.headers, response.statusCode);
   }
-  
   /* Other type of error, or unhandled Web API error format */
   return new WebapiError(response.body, response.headers, response.statusCode, response.body);
+}
 };
 
 /* Make the request to the Web API */
