@@ -38,8 +38,10 @@ const Dashboard = ({ code }) => {
     let topArtists = data.body.items;
     console.log(topArtists);
     try{
-    setArtistsList([{name: topArtists[0].name, pic: topArtists[0].images[0].url, url: topArtists[0].external_urls.spotify}, {name: topArtists[1].name, pic: topArtists[1].images[0].url, url: topArtists[1].external_urls.spotify}, {name: topArtists[2].name, pic: topArtists[2].images[0].url, url: topArtists[2].external_urls.spotify}, {name: topArtists[3].name, pic: topArtists[3].images[0].url, url: topArtists[3].external_urls.spotify}]);
-    }
+    setArtistsList([{name: topArtists[0].name, pic: topArtists[0].images[0].url, url: topArtists[0].external_urls.spotify}, 
+      {name: topArtists[1].name, pic: topArtists[1].images[0].url, url: topArtists[1].external_urls.spotify},
+      {name: topArtists[2].name, pic: topArtists[2].images[0].url, url: topArtists[2].external_urls.spotify}]);
+}
     catch(error){}
     }, function(err) {
     console.log('Something went wrong!', err);
@@ -51,8 +53,10 @@ const Dashboard = ({ code }) => {
     let topArtists = data.body.items;
     console.log(topArtists);
     try{
-    setArtistsList2([{name: topArtists[0].name, pic: topArtists[0].images[0].url, url: topArtists[0].external_urls.spotify}, {name: topArtists[1].name, pic: topArtists[1].images[0].url, url: topArtists[1].external_urls.spotify}, {name: topArtists[2].name, pic: topArtists[2].images[0].url, url: topArtists[2].external_urls.spotify}, {name: topArtists[3].name, pic: topArtists[3].images[0].url, url: topArtists[3].external_urls.spotify}]);
-    }
+    setArtistsList2([{name: topArtists[0].name, pic: topArtists[0].images[0].url, url: topArtists[0].external_urls.spotify}, 
+      {name: topArtists[1].name, pic: topArtists[1].images[0].url, url: topArtists[1].external_urls.spotify},
+      {name: topArtists[2].name, pic: topArtists[2].images[0].url, url: topArtists[2].external_urls.spotify}]);
+}
     catch(error){}
     }, function(err) {
     console.log('Something went wrong!', err);
@@ -64,7 +68,9 @@ const Dashboard = ({ code }) => {
     let topArtists = data.body.items;
     console.log(topArtists);
     try{
-    setArtistsList3([{name: topArtists[0].name, pic: topArtists[0].images[0].url, url: topArtists[0].external_urls.spotify}, {name: topArtists[1].name, pic: topArtists[1].images[0].url, url: topArtists[1].external_urls.spotify}, {name: topArtists[2].name, pic: topArtists[2].images[0].url, url: topArtists[2].external_urls.spotify}, {name: topArtists[3].name, pic: topArtists[3].images[0].url, url: topArtists[3].external_urls.spotify}]);
+    setArtistsList3([{name: topArtists[0].name, pic: topArtists[0].images[0].url, url: topArtists[0].external_urls.spotify}, 
+                     {name: topArtists[1].name, pic: topArtists[1].images[0].url, url: topArtists[1].external_urls.spotify},
+                     {name: topArtists[2].name, pic: topArtists[2].images[0].url, url: topArtists[2].external_urls.spotify}]);
     }
     catch(error){}
     }, function(err) {
@@ -77,7 +83,13 @@ const Dashboard = ({ code }) => {
     let topTracks = data.body.items;
     console.log(topTracks);
     try{
-      setTracksList([{name: topTracks[0].album.name, pic: topTracks[0].album.images[0].url, url: topTracks[0].album.external_urls.spotify, artist: topTracks[0].artists[0].name}, {name: topTracks[1].album.name, pic: topTracks[1].album.images[0].url, url: topTracks[1].album.external_urls.spotify, artist: topTracks[1].artists[0].name}, {name: topTracks[2].album.name, pic: topTracks[2].album.images[0].url, url: topTracks[2].album.external_urls.spotify, artist: topTracks[2].artists[0].name}, {name: topTracks[3].album.name, pic: topTracks[3].album.images[0].url, url: topTracks[3].album.external_urls.spotify, artist: topTracks[3].artists[0].name}]);
+      setTracksList([
+        {name: topTracks[0].name, pic: topTracks[0].album.images[0].url, url: topTracks[0].album.external_urls.spotify, artist: topTracks[0].artists[0].name}, 
+        {name: topTracks[1].name, pic: topTracks[1].album.images[0].url, url: topTracks[1].album.external_urls.spotify, artist: topTracks[1].artists[0].name}, 
+        {name: topTracks[2].name, pic: topTracks[2].album.images[0].url, url: topTracks[2].album.external_urls.spotify, artist: topTracks[2].artists[0].name}, 
+        {name: topTracks[3].name, pic: topTracks[3].album.images[0].url, url: topTracks[3].album.external_urls.spotify, artist: topTracks[3].artists[0].name},
+        {name: topTracks[4].name, pic: topTracks[4].album.images[0].url, url: topTracks[4].album.external_urls.spotify, artist: topTracks[4].artists[0].name},
+        {name: topTracks[5].name, pic: topTracks[5].album.images[0].url, url: topTracks[5].album.external_urls.spotify, artist: topTracks[5].artists[0].name}]);
     }catch(error){
       //empty
     }
@@ -92,7 +104,13 @@ const Dashboard = ({ code }) => {
     let topTracks = data.body.items;
     console.log(topTracks);
     try{
-      setTracksList2([{name: topTracks[0].album.name, pic: topTracks[0].album.images[0].url, url: topTracks[0].album.external_urls.spotify, artist: topTracks[0].artists[0].name}, {name: topTracks[1].album.name, pic: topTracks[1].album.images[0].url, url: topTracks[1].album.external_urls.spotify, artist: topTracks[1].artists[0].name}, {name: topTracks[2].album.name, pic: topTracks[2].album.images[0].url, url: topTracks[2].album.external_urls.spotify, artist: topTracks[2].artists[0].name}, {name: topTracks[3].album.name, pic: topTracks[3].album.images[0].url, url: topTracks[3].album.external_urls.spotify, artist: topTracks[3].artists[0].name}]);
+      setTracksList2([
+        {name: topTracks[0].name, pic: topTracks[0].album.images[0].url, url: topTracks[0].album.external_urls.spotify, artist: topTracks[0].artists[0].name}, 
+        {name: topTracks[1].name, pic: topTracks[1].album.images[0].url, url: topTracks[1].album.external_urls.spotify, artist: topTracks[1].artists[0].name}, 
+        {name: topTracks[2].name, pic: topTracks[2].album.images[0].url, url: topTracks[2].album.external_urls.spotify, artist: topTracks[2].artists[0].name}, 
+        {name: topTracks[3].name, pic: topTracks[3].album.images[0].url, url: topTracks[3].album.external_urls.spotify, artist: topTracks[3].artists[0].name},
+        {name: topTracks[4].name, pic: topTracks[4].album.images[0].url, url: topTracks[4].album.external_urls.spotify, artist: topTracks[4].artists[0].name},
+        {name: topTracks[5].name, pic: topTracks[5].album.images[0].url, url: topTracks[5].album.external_urls.spotify, artist: topTracks[5].artists[0].name}]);
     }catch(error){
       //empty
     }
@@ -106,7 +124,13 @@ const Dashboard = ({ code }) => {
       let topTracks = data.body.items;
       console.log(topTracks);
       try{
-        setTracksList3([{name: topTracks[0].album.name, pic: topTracks[0].album.images[0].url, url: topTracks[0].album.external_urls.spotify, artist: topTracks[0].artists[0].name}, {name: topTracks[1].album.name, pic: topTracks[1].album.images[0].url, url: topTracks[1].album.external_urls.spotify, artist: topTracks[1].artists[0].name}, {name: topTracks[2].album.name, pic: topTracks[2].album.images[0].url, url: topTracks[2].album.external_urls.spotify, artist: topTracks[2].artists[0].name}, {name: topTracks[3].album.name, pic: topTracks[3].album.images[0].url, url: topTracks[3].album.external_urls.spotify, artist: topTracks[3].artists[0].name}]);
+        setTracksList3([
+          {name: topTracks[0].name, pic: topTracks[0].album.images[0].url, url: topTracks[0].album.external_urls.spotify, artist: topTracks[0].artists[0].name}, 
+          {name: topTracks[1].name, pic: topTracks[1].album.images[0].url, url: topTracks[1].album.external_urls.spotify, artist: topTracks[1].artists[0].name}, 
+          {name: topTracks[2].name, pic: topTracks[2].album.images[0].url, url: topTracks[2].album.external_urls.spotify, artist: topTracks[2].artists[0].name}, 
+          {name: topTracks[3].name, pic: topTracks[3].album.images[0].url, url: topTracks[3].album.external_urls.spotify, artist: topTracks[3].artists[0].name},
+          {name: topTracks[4].name, pic: topTracks[4].album.images[0].url, url: topTracks[4].album.external_urls.spotify, artist: topTracks[4].artists[0].name},
+          {name: topTracks[5].name, pic: topTracks[5].album.images[0].url, url: topTracks[5].album.external_urls.spotify, artist: topTracks[5].artists[0].name}]);
       }catch(error){
         //empty
       }
@@ -118,38 +142,49 @@ const Dashboard = ({ code }) => {
   }, [accessToken]);
 
   return (
-    <div>
-        <h1>Welcome {userID}!</h1>
-        <h1>Your Top 6 Tracks short term:</h1>
+    <div class="container" style={{display: "flex"}}>
+        <h1><center>Welcome {userID}!</center></h1>
+        <div class = "break"></div>
+        <h1><center>Your Top 6 Tracks short term:</center></h1>
+        <div class = "break"></div>
         {tracksList.map((track) => (<h3 key = {track.name}> 
         <Card image = {track.pic} title = {track.name} url = {track.url} desc = {track.artist}/>
         </h3>))}
-
-        <h1>Your Top 6 Tracks medium term:</h1>
+        <div class = "break"></div>
+        
+        <h1><center>Your Top 6 Tracks medium term:</center></h1>
+        <div class = "break"></div>
         {tracksList2.map((track) => (<h3 key = {track.name}> 
         <Card image = {track.pic} title = {track.name} url = {track.url} desc = {track.artist}/>
         </h3>))}
+        <div class = "break"></div>
 
-        <h1>Your Top 6 Tracks long term:</h1>
+        <h1><center>Your Top 6 Tracks long term:</center></h1>
+        <div class = "break"></div>
         {tracksList3.map((track) => (<h3 key = {track.name}> 
         <Card image = {track.pic} title = {track.name} url = {track.url} desc = {track.artist}/>
         </h3>))}
-
-        <h1>Your Top 4 Artists short term:</h1>
-        {artistsList.map((artist) => (<h3 key = {artist.name}> 
+        <div class = "break"></div>
+        <h1><center>Your Top 3 Artists short term:</center></h1>
+        <div class = "break"></div>
+        {artistsList.map((artist) => (<h3 key = {artist.name}>
         <Card image = {artist.pic} title = {artist.name} url = {artist.url}/>
         </h3>))}
+        <div class = "break"></div>
 
-        <h1>Your Top 4 Artists medium term:</h1>
+        <h1><center>Your Top 3 Artists medium term:</center></h1>
+        <div class = "break"></div>
         {artistsList2.map((artist) => (<h3 key = {artist.name}> 
         <Card image = {artist.pic} title = {artist.name} url = {artist.url}/>
         </h3>))}
+        <div class = "break"></div>
 
-        <h1>Your Top 4 Artists long term:</h1>
+        <h1><center>Your Top 3 Artists long term:</center></h1>
+        <div class = "break"></div>
         {artistsList3.map((artist) => (<h3 key = {artist.name}> 
         <Card image = {artist.pic} title = {artist.name} url = {artist.url}/>
         </h3>))}
-   
+        <div class = "break"></div>
     </div>
   );
 };
